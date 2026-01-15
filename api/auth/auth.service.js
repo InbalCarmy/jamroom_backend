@@ -59,5 +59,5 @@ async function signup({ username, password, instrument }) {
     if (userExist) throw 'Username already taken'
 
     const hash = await bcrypt.hash(password, saltRounds)
-    return userService.add({ username, password: hash, instrument })
+    return userService.add({ username, password: hash, instrument, isAdmin })
 }
