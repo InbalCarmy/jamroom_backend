@@ -317,3 +317,5 @@
 14.1.2026, 18:13:27 - INFO - User login:  | {"_id":"696795feffb15320b4662efb","username":"admin","isAdmin":true,"instrument":"Bass"}
 15.1.2026, 10:19:45 - INFO - Server is running on: http://localhost:3030/
 15.1.2026, 10:35:55 - INFO - Server is running on: http://localhost:3030/
+15.1.2026, 10:47:52 - INFO - Server is running on: http://localhost:3030/
+15.1.2026, 10:48:10 - INFO - Server is running on: http://localhost:3030/
