@@ -49,9 +49,9 @@ setupSocketAPI(server)
 // and allow vue/react-router to take it from there
 
 // Uncomment when you have a public/index.html file
-// app.get('/*all', (req, res) => {
-//     res.sendFile(path.resolve('public/index.html'))
-// })
+app.get('/*all', (req, res) => {
+    res.sendFile(path.resolve('public/index.html'))
+})
 
 import { loggerService} from './services/logger.service.js'
 const port = process.env.PORT || 3030

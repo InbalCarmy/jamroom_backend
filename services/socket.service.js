@@ -31,6 +31,16 @@ export function setupSocketAPI(http) {
             loggerService.info(`Admin ended session from socket [id: ${socket.id}]`)
             socket.broadcast.emit('end-session')
         })
+        socket.on('request-current-song', () => {
+            loggerService.info(`User requesting current song [id: ${socket.id}]`)
+            // Broadcast request to admin only (or all admins)
+            socket.broadcast.emit('request-current-song')
+        })
+        socket.on('current-song', (data) => {
+            loggerService.info(`Admin sending current song [id: ${data.songId}]`)
+            // Send to the requesting user
+            socket.broadcast.emit('current-song', data)
+        })
 
     })
 }
