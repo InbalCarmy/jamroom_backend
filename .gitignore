@@ -2,6 +2,5 @@ node_modules
 .env
 dist
 build
-services/logger.service.js
 logs/
 *.log
