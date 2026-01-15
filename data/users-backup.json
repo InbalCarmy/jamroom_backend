@@ -1,0 +1,38 @@
+[
+  {
+    "username": "admin",
+    "password": "admin123",
+    "instrument": "Piano",
+    "isAdmin": true
+  },
+  {
+    "username": "john_guitar",
+    "password": "pass123",
+    "instrument": "Guitar",
+    "isAdmin": false
+  },
+  {
+    "username": "sarah_drums",
+    "password": "pass123",
+    "instrument": "Drums",
+    "isAdmin": false
+  },
+  {
+    "username": "mike_bass",
+    "password": "pass123",
+    "instrument": "Bass",
+    "isAdmin": false
+  },
+  {
+    "username": "emma_vocals",
+    "password": "pass123",
+    "instrument": "Vocals",
+    "isAdmin": false
+  },
+  {
+    "username": "alex_keys",
+    "password": "pass123",
+    "instrument": "Keyboard",
+    "isAdmin": false
+  }
+]
