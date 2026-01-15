@@ -9,7 +9,6 @@ export const songService = {
 }
 
 async function query(filterBy = {txt : ''}) {
-    console.log('** filterBy backend:' , filterBy);
     const criteria = _buildCriteria(filterBy)
     try {
         const collection = await dbService.getCollection('song')

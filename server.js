@@ -7,7 +7,7 @@ import cookieParser from 'cookie-parser'
 import { songRoutes } from './api/song/song.routes.js'
 import { authRoutes } from './api/auth/auth.routes.js'
 import { userRoutes } from './api/user/user.routes.js'
-// import { setupSocketAPI } from './services/socket.service.js'
+import { setupSocketAPI } from './services/socket.service.js'
 
 import { setupAsyncLocalStorage } from './middlewares/setupAls.middleware.js'
 
@@ -40,17 +40,18 @@ app.use('/api/auth', authRoutes)
 app.use('/api/user', userRoutes)
 app.use('/api/song', songRoutes)
 
-// setupSocketAPI(server)
+setupSocketAPI(server)
 
 
 // Make every unhandled server-side-route match index.html
-// so when requesting http://localhost:3030/unhandled-route... 
+// so when requesting http://localhost:3030/unhandled-route...
 // it will still serve the index.html file
 // and allow vue/react-router to take it from there
 
-app.get('/*all', (req, res) => {
-    res.sendFile(path.resolve('public/index.html'))
-})
+// Uncomment when you have a public/index.html file
+// app.get('/*all', (req, res) => {
+//     res.sendFile(path.resolve('public/index.html'))
+// })
 
 import { loggerService} from './services/logger.service.js'
 const port = process.env.PORT || 3030
